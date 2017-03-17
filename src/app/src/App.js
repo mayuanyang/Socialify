@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
+import Header from './components/Header';
 import AboutMe from './components/AboutMe';
 import Footer from './components/Footer';
 import Menu from './components/Menu';
@@ -11,12 +12,9 @@ class App extends Component {
     return (
       <div className="App">
         <Menu />
-        <div className="App-header">
-          
-        </div>
+        <Header />
         <div className="content row">
-        <AboutMe />
-          I will update this page every so often
+          <AboutMe />
         </div>
         <Footer />
       </div>
