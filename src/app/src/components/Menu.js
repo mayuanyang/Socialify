@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './AboutMe.css';
 import fb from '../modules/FirebaseHelper';
+import { Link } from 'react-router-dom';
 
 class Menu extends Component {
     constructor(props) {
@@ -8,20 +9,28 @@ class Menu extends Component {
         this.state = {
             menu: []
         }
+
+    }
+
+    componentDidMount() {
         var self = this;
         var menuRef = fb.getRecords("/menu/mainmenu");
         menuRef.on('value', function (snapshot) {
             var menuItems = (snapshot.val().items);
             var list = menuItems.map((item) => {
-                    return <li key={item.id}><a href="#">{item.text}</a></li>
-                });
-            
+                return <li key={item.id}><Link to={`${item.path}`}>{item.text}</Link></li>
+
+            });
+
             self.setState({
                 menu: list
             });
         });
     }
 
+    componentWillUnmount(){
+
+    }
 
     render() {
         return (
@@ -41,9 +50,7 @@ class Menu extends Component {
                             {this.state.menu}
                         </ul>
                         <ul className="nav navbar-nav navbar-right">
-                            <li><a href="#">Right 1</a></li>
-                            <li><a href="#">Right 2</a></li>
-                            <li><a href="#">Right 3</a></li>
+                            
                         </ul>
                     </div>
                 </div>

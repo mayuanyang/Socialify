@@ -1,23 +1,25 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
 import Header from './components/Header';
 import AboutMe from './components/AboutMe';
 import Footer from './components/Footer';
 import Menu from './components/Menu';
-//import { Navbar, Jumbotron, Button, NavItem, NavDropdown, MenuItem } from 'react-bootstrap';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <Menu />
-        <Header />
-        <div className="content row">
-          <AboutMe />
-        </div>
-        <Footer />
-      </div>
+      <Router>
+          <div className="App">
+            <Menu />
+            <Header />
+            <div className="content row">
+              <Route exact path="/aboutme" component={AboutMe} />
+            </div>
+            <Footer />
+          </div>
+      </Router>
+
 
     );
   }
