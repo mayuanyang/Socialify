@@ -13,9 +13,14 @@ class Header extends Component {
         newsRef.on('value', function (snapshot) {
             var newsItems = (snapshot.val().items);
             var list = newsItems.map((item) => {
-                    return <li key={item.id}><a href="#">{item.text}</a></li>
-                });
-            
+                return <div key={item.id} className="col-md-4">
+                    <div className="panel panel-default">
+                        <div className="panel-heading">Panel heading without title</div>
+                        <div className="panel-body">{item.text}</div>
+                    </div>
+                </div>
+            });
+
             self.setState({
                 news: list
             });
@@ -24,10 +29,8 @@ class Header extends Component {
 
     render() {
         return (
-            <div className="App-header">
-<ul className="nav navbar-nav">
-                            {this.state.news}
-                        </ul>
+            <div className="row App-header">
+                {this.state.news}
             </div>
         );
     }

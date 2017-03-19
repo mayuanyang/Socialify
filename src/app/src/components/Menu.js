@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './AboutMe.css';
+import '../pages/AboutMe.css';
 import fb from '../modules/FirebaseHelper';
 import { Link } from 'react-router-dom';
 
@@ -43,7 +43,7 @@ class Menu extends Component {
                             <span className="icon-bar"></span>
                             <span className="icon-bar"></span>
                         </button>
-                        <a className="navbar-brand" href="#" onClick={this.sendRecordToFirebase}>Eddy Ma</a>
+                        <Link className="navbar-brand" to="/" >Eddy Ma</Link> 
                     </div>
                     <div id="navbar" className="navbar-collapse collapse">
                         <ul className="nav navbar-nav">
