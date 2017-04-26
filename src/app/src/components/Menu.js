@@ -43,7 +43,7 @@ class Menu extends Component {
                             <span className="icon-bar"></span>
                             <span className="icon-bar"></span>
                         </button>
-                        <Link className="navbar-brand" to="/" >Eddy Ma</Link> 
+                        <Link className="navbar-brand" to="/home" >Eddy Ma</Link> 
                     </div>
                     <div id="navbar" className="navbar-collapse collapse">
                         <ul className="nav navbar-nav">

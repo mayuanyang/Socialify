@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import Header from './components/Header';
 import AboutMe from './pages/AboutMe';
-import ContactMe from './pages/Home';
+import Home from './pages/Home';
 import ContactMe from './pages/ContactMe';
 import Blog from './pages/Blog';
 import Project from './pages/Project';
