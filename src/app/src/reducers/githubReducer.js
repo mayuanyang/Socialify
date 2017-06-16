@@ -7,10 +7,10 @@ export default function reducer(state={
 
     switch (action.type) {
       case "FETCH_GITHUB_REPOS": {
-        return {...state, fetching: true}
+        return {...state, fetching: true};
       }
       case "GITHUB_REPOS_FETCH_FAILED": {
-        return {...state, fetching: false, error: action.payload}
+        return {...state, fetching: false, error: action.payload};
       }
       case "GITHUB_REPOS_FULFILLED": {
         return {
@@ -18,9 +18,10 @@ export default function reducer(state={
           fetching: false,
           fetched: true,
           repos: action.payload,
-        }
+        };
+      }
+      default :{
+        return state;
       }
     }
-
-    return state
 }

@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { Provider } from 'react-redux';
 import './App.css';
-import Header from './components/Header';
 import AboutMe from './pages/AboutMe';
 import Home from './pages/Home';
 import ContactMe from './pages/ContactMe';
