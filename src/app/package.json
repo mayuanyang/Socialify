@@ -18,7 +18,9 @@
     "redux": "^3.6.0",
     "redux-logger": "^3.0.6",
     "redux-promise-middleware": "^4.3.0",
-    "redux-thunk": "^2.2.0"
+    "redux-thunk": "^2.2.0",
+    "structured-log": "^0.1.0",
+    "structured-log-seq-sink": "^0.3.3"
   },
   "devDependencies": {
     "react-scripts": "0.9.5"
