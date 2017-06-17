@@ -13,8 +13,7 @@ const serilogMiddleware = (store) => (next) =>(action) => {
     var logger = structuredLog.configure()
   .writeTo(seqSink({ url: "http://localhost:5341"}))
   .create();
-  logger.info('serilog');
-  //logger.info('Receive action {@action}', action);
+  logger.info('Receive action {@action}', action);
   next(action);
 }
 
