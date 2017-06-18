@@ -17,7 +17,7 @@ class Project extends React.Component {
 
     render() {
         return (
-            <div className="about-me-title container">
+            <div className="container">
                 <h3>Projects that i am currently working on</h3>
                 <ul>
                     {this.props.repos.map(repo => (

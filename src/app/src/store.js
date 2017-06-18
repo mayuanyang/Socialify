@@ -38,4 +38,6 @@ const dummyMiddleware2 = (store) => (next) =>(action) => {
 
 const middleware = applyMiddleware(serilogMiddleware, dummyMiddleware2, dummyMiddleware1, promise(), thunk, createlogger)
 
-export default createStore(reducer, middleware)
+var store = createStore(reducer, middleware);
+window.store = store;
+export default store;
