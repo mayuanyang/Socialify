@@ -17,8 +17,7 @@ class Project extends React.Component {
 
     render() {
         return (
-            <div className="container">
-                <h3>Projects that i am currently working on</h3>
+            <div id="project-page" className="container">
                 <ul>
                     {this.props.repos.map(repo => (
                         <GitHubRepo key={repo.html_url} {...repo} onButtonClick={this.onRepoItemClicked.bind(this)} />

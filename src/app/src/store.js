@@ -8,12 +8,19 @@ import reducer from "./reducers/combineReducers"
 import seqSink from 'structured-log-seq-sink';
 
 const serilogMiddleware = (store) => (next) =>(action) => {
-    
     const structuredLog = require('structured-log');
     var logger = structuredLog.configure()
   .writeTo(seqSink({ url: "http://localhost:5341"}))
   .create();
-  logger.info('Receive action {@action}', action);
+  console.log(action);
+  if(typeof(action) === 'object'){
+      console.log('object');
+      logger.info('Receive action {@action}', action);
+  }else{
+      console.log('not object');
+      logger.info('Receive action {action}', action);
+  }
+  
   next(action);
 }
 

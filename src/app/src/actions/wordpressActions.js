@@ -1,10 +1,10 @@
 import axios from "axios";
+import config from "../config";
 
 export function fetchPosts() {
   return function(dispatch) {
     dispatch({type: "FETCH_WORDPRESS_POSTS"});
-    
-    axios.get("https://public-api.wordpress.com/wp/v2/sites/eddyma.wordpress.com/posts")
+    axios.get(`${config.wordpress_endpoint_base_path}/posts`)
       .then((response) => {
         dispatch({type: "WORDPRESS_POSTS_FULFILLED", payload: response.data})
       })
