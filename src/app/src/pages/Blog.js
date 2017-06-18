@@ -11,7 +11,6 @@ class Blog extends Component {
     }
 
     render() {
-        console.log(this.props.posts);
         return (
             <div className="container">
                 {this.props.posts.map(post => (
