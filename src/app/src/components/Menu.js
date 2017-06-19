@@ -6,9 +6,12 @@ import { Link } from 'react-router-dom';
 class Menu extends Component {
     constructor(props) {
         super(props);
-        this.state = {
-            menu: []
-        }
+        this.menu = [
+            <li key="1"><Link to='/project'>Projects</Link></li>,
+            <li key="2"><Link to='/blog'>Blogs</Link></li>,
+            <li key="3"><Link to='/aboutme'>About Me</Link></li>,
+            <li key="4"><Link to='/contactme'>Contact Me</Link></li>,
+        ]
 
     }
 
@@ -28,10 +31,6 @@ class Menu extends Component {
         });
     }
 
-    componentWillUnmount(){
-
-    }
-
     render() {
         return (
             <nav className="navbar navbar-default">
@@ -47,7 +46,7 @@ class Menu extends Component {
                     </div>
                     <div id="navbar" className="navbar-collapse collapse">
                         <ul className="nav navbar-nav">
-                            {this.state.menu}
+                            {this.menu}
                         </ul>
                         <ul className="nav navbar-nav navbar-right">
                             

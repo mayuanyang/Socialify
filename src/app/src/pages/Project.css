@@ -1,7 +1,12 @@
 #project-page{
     font-size: 15px;
+    text-align: left;
 }
 
 #project-page .title{
     font-size: 20px;
+}
+
+#project-page .project-item{
+    list-style-type: none;
 }

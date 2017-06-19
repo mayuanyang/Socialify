@@ -5,7 +5,7 @@ class GitHubRepo extends Component {
     
     render() {
         return (
-                <li  key={this.props.html_url}>
+                <li className="project-item" key={this.props.html_url}>
                     <a className="title" href={this.props.html_url}>{this.props.name}</a>
                     <div>
                         <p>{this.props.description}</p>

@@ -3,3 +3,8 @@ body {
   padding: 0;
   font-family: sans-serif;
 }
+
+.date{
+  font-size: 14px;
+  color: #828282;
+}

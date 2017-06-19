@@ -12,11 +12,11 @@ class Blog extends Component {
 
     render() {
         return (
-            <div className="container">
+            <ul id="blogs" className="container">
                 {this.props.posts.map(post => (
                         <BlogPost key={post.id} {...post}  />
                     ))}
-            </div>
+            </ul>
         );
     }
 }
