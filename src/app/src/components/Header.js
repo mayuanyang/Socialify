@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './Header.css';
-import fb from '../modules/FirebaseHelper';
+//import fb from '../modules/FirebaseHelper';
 
 class Header extends Component {
     

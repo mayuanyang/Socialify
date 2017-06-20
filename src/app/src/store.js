@@ -12,12 +12,10 @@ const serilogMiddleware = (store) => (next) =>(action) => {
     var logger = structuredLog.configure()
   .writeTo(seqSink({ url: "http://localhost:5341"}))
   .create();
-  console.log(action);
+  //console.log(action);
   if(typeof(action) === 'object'){
-      console.log('object');
       logger.info('Receive action {@action}', action);
   }else{
-      console.log('not object');
       logger.info('Receive action {action}', action);
   }
   

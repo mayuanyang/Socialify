@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import '../pages/AboutMe.css';
-import fb from '../modules/FirebaseHelper';
 import { Link } from 'react-router-dom';
 
 class Menu extends Component {
@@ -13,22 +12,6 @@ class Menu extends Component {
             <li key="4"><Link to='/contactme'>Contact Me</Link></li>,
         ]
 
-    }
-
-    componentDidMount() {
-        var self = this;
-        var menuRef = fb.getRecords("/menu/mainmenu");
-        menuRef.on('value', function (snapshot) {
-            var menuItems = (snapshot.val().items);
-            var list = menuItems.map((item) => {
-                return <li key={item.id}><Link to={`${item.path}`}>{item.text}</Link></li>
-
-            });
-
-            self.setState({
-                menu: list
-            });
-        });
     }
 
     render() {
