@@ -16,11 +16,11 @@ class Blog extends Component {
 
     render() {
         return (
-            <ul id="blogs" className="container">
+            <div id="blogs" className="container">
                 {this.props.posts.map(post => (
                         <BlogPost key={post.id} {...post}  onCommentButtonClick={this.onGetCommentsClicked.bind(this)} comments={this.props.comments} />
                     ))}
-            </ul>
+            </div>
         );
     }
 }
