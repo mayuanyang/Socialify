@@ -14,11 +14,6 @@ footer .footer-main {
     padding: 50px 0;
 }
 
-footer .footer-social ul.list-inline li.social-github a {
-    background-color: #333333;
-    transition: all 0.2s ease-in-out;
-}
-
 footer .footer-social ul.list-inline li a {
     display: block;
     height: 50px;
@@ -27,6 +22,11 @@ footer .footer-social ul.list-inline li a {
     font-size: 25px;
     border-radius: 100%;
     color: white;
+}
+
+footer .footer-social ul.list-inline li.social-github a {
+    background-color: #333333;
+    transition: all 0.2s ease-in-out;
 }
 
 footer .footer-social ul.list-inline li.social-twitter a {
@@ -34,13 +34,8 @@ footer .footer-social ul.list-inline li.social-twitter a {
     transition: all 0.2s ease-in-out;
 }
 
-footer .footer-social ul.list-inline li a {
-    display: block;
-    height: 50px;
-    width: 50px;
-    line-height: 50px;
-    font-size: 25px;
-    border-radius: 100%;
-    color: white;
+footer .footer-social ul.list-inline li.social-wordpress a {
+    background-color: #0087be;
+    transition: all 0.2s ease-in-out;
 }
 

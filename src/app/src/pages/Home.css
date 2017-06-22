@@ -178,3 +178,18 @@
         border-left-width: 0;
     }
 }
+
+.twitter {
+    background-color: #1da1f2 !important;
+    transition: all 0.2s ease-in-out;
+}
+
+.github {
+    background-color: #333333 !important;
+    transition: all 0.2s ease-in-out;
+}
+
+.wordpress {
+    background-color: #0087be !important;
+    transition: all 0.2s ease-in-out;
+}

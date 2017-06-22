@@ -7,7 +7,7 @@ import GitHubRepo from '../components/GitHubRepo';
 
 class Project extends React.Component {
     componentWillMount() {
-        this.props.dispatch(fetchRepos())
+        this.props.dispatch(fetchRepos());
     }
 
     onRepoItemClicked(e){

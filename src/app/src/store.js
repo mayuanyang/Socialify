@@ -10,38 +10,19 @@ import seqSink from 'structured-log-seq-sink';
 const serilogMiddleware = (store) => (next) =>(action) => {
     const structuredLog = require('structured-log');
     var logger = structuredLog.configure()
-  .writeTo(seqSink({ url: "http://localhost:5341"}))
-  .create();
-  //console.log(action);
-  if(typeof(action) === 'object'){
-      logger.info('Receive action {@action}', action);
-  }else{
-      logger.info('Receive action {action}', action);
-  }
-  
-  next(action);
+        .writeTo(seqSink({ url: "http://localhost:5341"}))
+        .create();
+
+        if(typeof(action) === 'object'){
+            logger.info('Receive action {@action}', action);
+        }else{
+            logger.info('Receive action {action}', action);
+        }
+        
+        next(action);
 }
 
-const dummyMiddleware1 = (store) => (next) =>(action) => {
-    const structuredLog = require('structured-log');
-    var logger = structuredLog.configure()
-  .writeTo(seqSink({ url: "http://localhost:5341"}))
-  .create();
-  logger.info('dummy1');
-  next(action);
-}
-
-const dummyMiddleware2 = (store) => (next) =>(action) => {
-    const structuredLog = require('structured-log');
-    var logger = structuredLog.configure()
-  .writeTo(seqSink({ url: "http://localhost:5341"}))
-  .create();
-  logger.info('dummy2');
-  next(action);
-}
-
-
-const middleware = applyMiddleware(serilogMiddleware, dummyMiddleware2, dummyMiddleware1, promise(), thunk, createlogger)
+const middleware = applyMiddleware(serilogMiddleware, promise(), thunk, createlogger)
 
 var store = createStore(reducer, middleware);
 window.store = store;

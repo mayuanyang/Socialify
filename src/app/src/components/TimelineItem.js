@@ -1,25 +1,30 @@
 import React, { Component } from 'react';
+import TimelineLogo from './TimelineLogo';
+import Moment from 'moment';
 
 class TimelineItem extends Component {
     
     render() {
-        console.log(this.props.item);
+         Moment.locale('en-au')
+        const formattedDT = Moment(this.props.item.date).format('LL')
         return (
             <li className={this.props.item.inverted ? 'timeline-inverted': 'timeline'}>
-                            <div className="{'timeline-badge': true, 'warning': msg.from == model.botName, 'success':msg.from != model.botName}">
-                                <i className="fa fa-check">
-                                    {this.props.item.type}
-                                </i>
-                            </div>
+                            
+                                <TimelineLogo type={this.props.item.type} />
+                        
                             <div className="timeline-panel">
                                 <div className="timeline-heading">
-                                    <h4 className="timeline-title">{this.props.item.title}</h4>
-                                    <p>
-                                        <small className="text-muted"><i className="fa fa-clock-o">{this.props.item.description}</i></small>
+                                    <h4 className="timeline-title">
+                                        <a href={this.props.item.link} dangerouslySetInnerHTML={{__html:this.props.item.title}} />
+                                    </h4>
+                                    <p className="text-muted">
+                                            <i className="fa fa-clock-o">
+                                                {formattedDT}
+                                            </i>
                                     </p>
                                 </div>
                                 <div className="timeline-body">
-                                    <p>Hello world</p>
+                                    <p>{this.props.item.description}</p>
                                 </div>
                             </div>
                             
