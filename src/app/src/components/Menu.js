@@ -7,9 +7,10 @@ class Menu extends Component {
         super(props);
         this.menu = [
             <li key="1"><Link to='/project'>Projects</Link></li>,
-            <li key="2"><Link to='/blog'>Blogs</Link></li>,
-            <li key="3"><Link to='/aboutme'>About Me</Link></li>,
-            <li key="4"><Link to='/contactme'>Contact Me</Link></li>,
+            <li key="2"><Link to='/twitter'>Tweets</Link></li>,
+            <li key="3"><Link to='/blog'>Blogs</Link></li>,
+            <li key="4"><Link to='/aboutme'>About Me</Link></li>,
+            <li key="5"><Link to='/contactme'>Contact Me</Link></li>,
         ]
 
     }
