@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import '../pages/AboutMe.css';
 import { Link } from 'react-router-dom';
+import config from '../config';
 
 class Menu extends Component {
     constructor(props) {
@@ -10,7 +11,6 @@ class Menu extends Component {
             <li key="2"><Link to='/twitter'>Tweets</Link></li>,
             <li key="3"><Link to='/blog'>Blogs</Link></li>,
             <li key="4"><Link to='/aboutme'>About Me</Link></li>,
-            <li key="5"><Link to='/contactme'>Contact Me</Link></li>,
         ]
 
     }
@@ -26,7 +26,7 @@ class Menu extends Component {
                             <span className="icon-bar"></span>
                             <span className="icon-bar"></span>
                         </button>
-                        <Link className="navbar-brand" to="/home" >Eddy Ma</Link> 
+                        <Link className="navbar-brand" to="/" >{config.app_title}</Link> 
                     </div>
                     <div id="navbar" className="navbar-collapse collapse">
                         <ul className="nav navbar-nav">
