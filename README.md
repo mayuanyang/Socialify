@@ -11,3 +11,9 @@ ReactJS + Redux
 Firebase
 GraphQL
 Relay
+
+## Install and Run
+Clone or fork the project
+Go to the app folder
+npm install
+npm start
