@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-
+import Moment from 'moment';
 
 class BlogPost extends Component {
 
@@ -15,18 +15,18 @@ class BlogPost extends Component {
     }
     
     render() {
-        console.log(this.state);
+        console.log(this.props);
+        Moment.locale('en-au');
         return (
             <div className="blog-post">
                 <div key={this.props.link} className="post">
-                        <span className="date">{this.props.date}</span>
 						<h2 className="blog-title"><a href={this.props.link}
 						dangerouslySetInnerHTML={{__html:this.props.title.rendered}}
 						/></h2>
+                        <span className="date">Published on: {Moment(this.props.date).format('LLL')}</span>
 						{this.props.excerpt.rendered ?
 							<div className="blog-content" dangerouslySetInnerHTML={{__html:this.props.excerpt.rendered}} />
 						: null}
-						<a className="button read-more" href={this.props.link}>Read More &raquo;</a>
 						
 					</div>            
             </div>

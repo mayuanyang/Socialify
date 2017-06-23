@@ -6,6 +6,7 @@ import promise from "redux-promise-middleware"
 
 import reducer from "./reducers/combineReducers"
 import seqSink from 'structured-log-seq-sink';
+import config from './config';
 
 const serilogMiddleware = (store) => (next) =>(action) => {
     const structuredLog = require('structured-log');
@@ -22,7 +23,11 @@ const serilogMiddleware = (store) => (next) =>(action) => {
         next(action);
 }
 
-const middleware = applyMiddleware(serilogMiddleware, promise(), thunk, createlogger)
+let middleware = applyMiddleware(promise(), thunk, createlogger);
+if (config.log_to_seq){
+    console.log('log to seq');
+    middleware = applyMiddleware(serilogMiddleware, promise(), thunk, createlogger);
+}
 
 var store = createStore(reducer, middleware);
 window.store = store;

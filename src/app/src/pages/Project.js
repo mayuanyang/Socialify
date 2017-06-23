@@ -20,7 +20,7 @@ class Project extends React.Component {
             <div id="project-page" className="container">
                 <ul>
                     {this.props.repos.map(repo => (
-                        <GitHubRepo key={repo.html_url} {...repo} 
+                        <GitHubRepo key={repo.id} {...repo} 
                         onButtonClick={this.onRepoItemClicked.bind(this)}  
                         />
                     ))}

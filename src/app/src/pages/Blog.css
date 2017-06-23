@@ -4,7 +4,7 @@
 }
 
 #blogs .blog-post{
-    margin: 10px 0px 10px 0px;
+    margin: 10px 0px 40px 0px;
 }
 
 #blogs .blog-title{
@@ -19,5 +19,6 @@
 }
 
 #blogs .date{
-    
+  font-size: 12px;
+  color: #828282;
 }

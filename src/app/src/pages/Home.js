@@ -25,7 +25,7 @@ class Home extends Component {
             const isInverted = new Date(star.starred_at).getDay() % 2 === 0;
             allItems.push(
                 {
-                    key: star.repo.html_url, 
+                    key: star.repo.id, 
                     title: star.repo.name, 
                     description: star.repo.description, 
                     type: "github",
@@ -75,7 +75,7 @@ class Home extends Component {
 
 Home = connect((store) => {
   return {
-    repos: store.github.repos,
+    repos: store.github.starredRepos,
     reposFetched: store.github.fetched,
     blogs: store.wordpress.posts
   };

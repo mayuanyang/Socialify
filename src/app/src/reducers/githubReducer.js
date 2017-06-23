@@ -1,5 +1,6 @@
 export default function reducer(state={
     repos: [],
+    starredRepos: [],
     fetching: false,
     fetched: false,
     error: null,
@@ -31,7 +32,7 @@ export default function reducer(state={
           ...state,
           fetching: false,
           fetched: true,
-          repos: action.payload,
+          starredRepos: action.payload,
         };
       }
       default :{
