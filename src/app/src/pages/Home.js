@@ -1,14 +1,14 @@
 import React, { Component } from 'react';
 import TimelineItem from '../components/TimelineItem'
 import './Home.css';
-import {fetchRepos} from '../actions/githubActions';
+import * as github from '../actions/githubActions';
 import * as wordpress from '../actions/wordpressActions';
 import { connect } from "react-redux";
 
 class Home extends Component {
     componentWillMount() {
         this.props.dispatch(wordpress.fetchPosts());
-        this.props.dispatch(fetchRepos());
+        this.props.dispatch(github.fetchStarred());
     }
 
     compare(a,b) {
@@ -21,17 +21,18 @@ class Home extends Component {
 
     render() {
         let allItems = [];
-        this.props.repos.map(repo => {
-            const isInverted = new Date(repo.created_at).getDay() % 2 === 0;
+        this.props.repos.map(star => {
+            const isInverted = new Date(star.starred_at).getDay() % 2 === 0;
             allItems.push(
                 {
-                    key: repo.html_url, 
-                    title: repo.name, 
-                    description: repo.description, 
+                    key: star.repo.html_url, 
+                    title: star.repo.name, 
+                    description: star.repo.description, 
                     type: "github",
-                    date: new Date(repo.created_at),
+                    date: new Date(star.starred_at),
                     inverted: isInverted,
-                    link: ''
+                    link: star.repo.html_url,
+                    subtype: 'Starred Repo'
                 });
                 // Just to make ESLint happy
                 return null;
@@ -45,7 +46,8 @@ class Home extends Component {
                 type: "wordpress",
                 date: new Date(blog.date),
                 inverted: isInverted,
-                link: blog.link
+                link: blog.link,
+                subtype: 'Blogged'
             });
             return null;
         });

@@ -15,7 +15,7 @@ class TimelineItem extends Component {
                             <div className="timeline-panel">
                                 <div className="timeline-heading">
                                     <h4 className="timeline-title">
-                                        <a href={this.props.item.link} dangerouslySetInnerHTML={{__html:this.props.item.title}} />
+                                        {this.props.item.subtype}&nbsp;<a href={this.props.item.link} dangerouslySetInnerHTML={{__html:this.props.item.title}} />
                                     </h4>
                                     <p className="text-muted">
                                             <i className="fa fa-clock-o">
