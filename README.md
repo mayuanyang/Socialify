@@ -1,5 +1,5 @@
-# pages.github.reactjs
-A reactjs implementation of Github Pages
+# Social network aggregator 
+A reactjs implementation of aggregating Github, Twitter and Wordpress
 
 ## Goal
 You might already have a [Github Pages](https://pages.github.com/), the goal for this project is to make the page dynamic, so that it becomes a representation of you, your organisation, your projects etc
