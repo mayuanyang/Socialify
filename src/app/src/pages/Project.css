@@ -1,7 +1,14 @@
 #project-page{
     font-size: 15px;
     text-align: left;
+    margin-top: 20px;
 }
+
+#project-page .page-header{
+    font-size: 18px;
+    border: none;
+}
+
 
 #project-page .title{
     font-size: 20px;
@@ -9,4 +16,30 @@
 
 #project-page .project-item{
     list-style-type: none;
+    border-top: 1px #e1e4e8 solid;
+    padding-top: 24px !important;
+    padding-bottom: 24px !important;
+}
+
+#project-page .col-lg-8{
+    padding-left: 0px;
+}
+
+#project-page .star{
+    color: #586069;
+    text-decoration: none;
+}
+
+#project-page .star :hover{
+    color: #0366d6;
+}
+
+
+#project-page p{
+    color: #586069 !important;
+    font-size: 14px;
+}
+
+#project-page .updated-on{
+    font-size: 12px;
 }

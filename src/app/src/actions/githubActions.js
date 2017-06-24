@@ -5,7 +5,7 @@ export function fetchRepos() {
   return function(dispatch) {
     dispatch({type: "FETCH_GITHUB_REPOS"});
     
-    axios.get(`${config.github_endpoint_base_path}/users/${config.github_username}/repos`)
+    axios.get(`${config.github_endpoint_base_path}/users/${config.github_username}/repos?sort=updated`)
       .then((response) => {
         dispatch({type: "GITHUB_REPOS_FULFILLED", payload: response.data})
       })
