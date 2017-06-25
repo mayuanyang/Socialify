@@ -1,19 +1,20 @@
-# Social network aggregator 
-A reactjs implementation of aggregating Github, Twitter and Wordpress
+# Social network integrator 
+A reactjs implementation of integrating Github, Twitter and Wordpress
+
+## Demo
+[Demo](https://mayuanyang.github.io/)
 
 ## Goal
-You might already have a [Github Pages](https://pages.github.com/), the goal for this project is to make the page dynamic, so that it becomes a representation of you, your organisation, your projects etc
+Setup a window for you or your organisation easily, e.g. Github provides [Github Pages](https://pages.github.com/) to host your/organisation pages and you might have Twitter and Wordpress blog else where, the goal for this project is to integrate those social networks.
 
-This project is aggregating some of the popular social networking's api e.g. your github projects, WordPress and Twitter
 
 ## Technologies
 ReactJS + Redux
-Firebase
-GraphQL
-Relay
 
-## Install and Run
+## Install, Run and Build
 Clone or fork the project
 Go to the app folder
 npm install
 npm start
+npm run build
+
