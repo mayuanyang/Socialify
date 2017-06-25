@@ -7,7 +7,7 @@
     "twitter_username": "nmolecule",
     "twitter_homepage_url": "https://twitter.com/nmolecule",
     "app_title": "Eddy Ma",
-    "about_me_header": "My name is Eddy Ma, a developer in Brisbane and keen to learn",
-    "about_me_description": "",
+    "about_me_header": "this goes into the header of the about me page",
+    "about_me_description": "this is the description about myself",
     "log_to_seq" : false
 }
