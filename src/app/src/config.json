@@ -4,10 +4,12 @@
     "github_endpoint_base_path": "https://api.github.com",
     "github_username": "mayuanyang",   
     "github_homepage_url": "https://github.com/mayuanyang",
-    "twitter_username": "nmolecule",
-    "twitter_homepage_url": "https://twitter.com/nmolecule",
     "app_title": "Eddy Ma",
     "about_me_header": "this goes into the header of the about me page",
     "about_me_description": "this is the description about myself",
-    "log_to_seq" : false
+    "log_to_seq": false,
+    "twitter_username": "nmolecule",
+    "twitter_homepage_url": "https://twitter.com/nmolecule",
+    "twitter_api_consumer_key": "957ipOmigbqYuXUahsOobJHMm",
+    "twitter_api_access_token": "25670819-YHWCQxxGuJaBN6e6NUQCiDt6mJ2ZATNpEkbFXSSQE"
 }
