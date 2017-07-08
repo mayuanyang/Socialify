@@ -3,12 +3,15 @@ import TimelineItem from '../components/TimelineItem'
 import './Home.css';
 import * as github from '../actions/githubActions';
 import * as wordpress from '../actions/wordpressActions';
+import * as twitter from '../actions/tweetActions';
 import { connect } from "react-redux";
 
 class Home extends Component {
     componentWillMount() {
         this.props.dispatch(wordpress.fetchPosts());
         this.props.dispatch(github.fetchStarred());
+        this.props.dispatch(twitter.fetchTweets());
+
     }
 
     compare(a,b) {
