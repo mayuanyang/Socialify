@@ -10,7 +10,7 @@ class Home extends Component {
     componentWillMount() {
         this.props.dispatch(wordpress.fetchPosts());
         this.props.dispatch(github.fetchStarred());
-        this.props.dispatch(twitter.fetchTweets());
+        //this.props.dispatch(twitter.fetchTweets());
 
     }
 
